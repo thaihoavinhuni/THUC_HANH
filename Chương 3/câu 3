@@ -1,0 +1,4 @@
+def say_hello():
+    a="Chào các bạn tớ là Hoà đây"
+    print(a)
+say_hello()
