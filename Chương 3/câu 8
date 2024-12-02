@@ -1,0 +1,12 @@
+import math
+
+def tinh_khoang_cach():
+    up = 5
+    down = 3
+    left = 3
+    right = 3
+    x = right - left  
+    y = up - down    
+    khoang_cach = math.sqrt(x**2 + y**2)
+    print(round(khoang_cach))
+tinh_khoang_cach()
