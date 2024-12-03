@@ -1,0 +1,12 @@
+def benefit(t, n, k):
+    for month in range(k):
+        n += n * (t/100)
+    return n
+try:
+    t= float(input("nhập lãi suất tiết kiệm(t%/tháng):"))
+    n= float(input("nhập số vốn ban đầu (n):"))
+    k= int(input("nhập số tháng gửi (k):"))
+    so_tien_nhan_duoc=benefit(t, n, k)
+    print(f"số tiền nhận được sau {k} tháng: {so_tien_nhan_duoc:.2f}")
+except ValueError:
+    print("vui lòng nhập số hợp lệ.")
