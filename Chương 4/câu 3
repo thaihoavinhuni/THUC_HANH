@@ -1,0 +1,4 @@
+s=input("nhập chuỗi:")
+print(f"chuỗi viết hoa: {s.upper()}")
+for h in s:
+      print(h)
