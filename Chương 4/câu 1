@@ -1,0 +1,3 @@
+s=input("nhập chuỗi:")
+for h in s:
+    print(h)
