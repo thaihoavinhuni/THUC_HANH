@@ -1,0 +1,4 @@
+nhap_so=input("nhập vào danh sách số(cách nhau bằng dấu phẩy):")
+so=[int(num.strip()) for num in nhap_so.split(',')]
+odd_numbers = [num for num in so if num % 2 !=0]
+print("các số lẻ là: ",','.join(map(str, odd_numbers)))
