@@ -1,0 +1,4 @@
+s=input("nhập chuỗi:")
+for h in s:
+ if h not in [ " ","/"]:
+     input(h)
