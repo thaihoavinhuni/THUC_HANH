@@ -1,0 +1,10 @@
+hoten=input("nhập họ tên đầy đủ của bạn :")
+slist=hoten.split()
+n=len(slist[0])
+ho= slist[0]
+ten= slist[n-1]
+dem=" ".join(slist[1:n-1])
+print("tên của bạn là: ", ten)
+print("họ của bạn là: ", ho)
+if  n>2:
+             print("tên đệm của bạn là: ",dem)
