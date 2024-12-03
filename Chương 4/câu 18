@@ -1,0 +1,10 @@
+def fibonacci_nho_hon_n(n):
+    ds=[]
+    a, b= 0, 1
+    while a<n:
+        ds.append(a)
+        a,b=b,a+b
+    return ds
+n=int(input("nhập số nguyên dương n: "))
+ds_so = fibonacci_nho_hon_n(n)
+print("các số fibonacci nhỏ hơn", n,"là", ds_so)
