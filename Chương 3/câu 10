@@ -1,0 +1,19 @@
+import math
+
+def Tính(R):
+    if R<=0:
+        return "Bán kính không hợp lệ! vui lòng bán kính dương."
+    chu_vi=2*math.pi*R
+    dien_tich=math.pi*R**2
+
+    return chu_vi, dien_tich
+try:
+    R=float(input("Nhập bán kính R:"))
+    ket_qua= Tính(R)
+    if isinstance(ket_qua, tuple):
+        print(f"chu vi hình tròn:{ket_qua[0]:.2f}")
+        print(f"diện tích hình tròn: {ket_qua[1]:.2f}")
+    else:
+        print(ket_qua)
+except ValueError:
+    print("Vui lòng nhập một số hợp lệ.")
