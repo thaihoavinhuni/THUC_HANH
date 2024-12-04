@@ -1,0 +1,8 @@
+import numpy as np
+student_ids = np.array([102, 101, 104, 103, 105])
+heights = np.array([1.75, 1.60, 1.80, 1.65, 1.70])  
+sorted_indices = np.lexsort((student_ids, heights))
+print("Thứ tự các chỉ số sau khi sắp xếp:", sorted_indices)
+print("\nDữ liệu đã được sắp xếp:")
+for i in sorted_indices:
+    print(f"ID sinh viên: {student_ids[i]}, Chiều cao: {heights[i]}")
