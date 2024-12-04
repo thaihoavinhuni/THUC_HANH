@@ -1,0 +1,15 @@
+import mymath
+radius=5
+arena= mymath.arena_of_circle(radius)
+print(f"Diện tích hình tròn có bán kính(radius) là: {arena}")
+perimeter = mymath.perimeter_of_circle(radius)
+print(f"Chu vi hình tròn có bán kính(radius) là: {perimeter}")
+number = 7
+squared = mymath.square(number)
+print(f"Bình phương của (number) là:{squared}")
+num=16
+squared_root = mymath.sqrt(num)
+print(f"Căn bậc hai của (num) là:{squared_root}")
+n = 5
+fact = mymath.factorial(n)
+print(f"Giai thừa của n là:{fact}")
