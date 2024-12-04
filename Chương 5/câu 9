@@ -1,0 +1,14 @@
+import search_module 
+n = int(input("Nhập số phần tử của danh sách: "))
+lst = []
+for i in range(n):
+    value = int(input(f"Nhập phần tử thứ {i+1}: "))
+    lst.append(value)
+lst.sort()
+print("Danh sách sau khi sắp xếp:", lst)
+value_to_find = int(input("Nhập phần tử cần tìm: "))
+result = search_module.binary_search(lst, value_to_find)
+if result:
+    print(f"Phần tử '{value_to_find}' được tìm thấy trong danh sách.")
+else:
+    print(f"Phần tử '{value_to_find}' không tồn tại trong danh sách.")
