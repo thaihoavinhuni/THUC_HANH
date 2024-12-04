@@ -1,0 +1,15 @@
+import datetime
+now = datetime.datetime.now()
+print(f"Ngày giờ hiện tại: {now}")
+formatted_date = now.strftime("%Y-%m-%d %H:%M:%S")
+print(f"Ngày giờ hiện tại theo định dạng YYYY-MM-DD HH:MM:SS: {formatted_date}")
+date_string = "2024-11-25 14:30:00"
+date_object = datetime.datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
+print(f"Đối tượng datetime từ chuỗi: {date_object}")
+some_day = datetime.datetime(2024, 12, 25)
+difference = some_day - now
+print(f"Sự khác biệt giữa ngày hiện tại và 25/12/2024 là: {difference}")
+ten_days_later = now + datetime.timedelta(days=10)
+print(f"Ngày sau 10 ngày: {ten_days_later}")
+ten_days_ago = now - datetime.timedelta(days=10)
+print(f"Ngày trước 10 ngày: {ten_days_ago}")
