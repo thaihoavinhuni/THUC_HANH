@@ -1,0 +1,4 @@
+array = list(range(12, 38))
+print(" Mảng được tạo: ",array)
+reversed_array = array[::-1]
+print("Mảng đảo ngược: ",reversed_array)
