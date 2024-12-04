@@ -1,0 +1,11 @@
+import numpy as np
+dtype = [('name', 'U20'), ('height', float), ('class', int)]  
+students = np.array([
+    ('Hoàng Văn Gia Phúc', 1.70, 10),
+    ('Nguyễn Đức Đạ', 1.60, 11),
+    ('Trần Đình Tú ', 1.62, 10)
+], dtype=dtype)
+sorted_students = np.sort(students, order=['class', 'height'])
+print("Danh sách sinh viên sau khi sắp xếp:")
+for student in sorted_students:
+    print(f"Tên: {student['name']}, Chiều cao: {student['height']}, Lớp: {student['class']}")
