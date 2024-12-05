@@ -1,0 +1,19 @@
+def read_and_reverse_file(filename):
+    try:
+        with open(filename, 'r', encoding='utf-8') as file:
+            
+            content = file.read()
+            
+            
+            reversed_content = content[::-1]
+            
+           
+            print("Nội dung file sau khi đảo ngược:")
+            print(reversed_content)
+    except FileNotFoundError:
+        print(f"Lỗi: Không tìm thấy file '{filename}'.")
+    except Exception as e:
+        print(f"Lỗi: {e}")
+        
+filename = input("Nhập tên file: ")
+read_and_reverse_file(filename)
