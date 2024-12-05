@@ -1,0 +1,18 @@
+import math
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius  
+
+    def tinh_dien_tich(self):
+       
+        return math.pi * self.radius ** 2  
+
+    def tinh_chu_vi(self):
+        
+        return 2 * math.pi * self.radius  
+
+radius = float(input("Nhập bán kính của hình tròn: "))
+circle = Circle(radius)
+
+print(f"Diện tích hình tròn: {circle.tinh_dien_tich():.2f}")
+print(f"Chu vi hình tròn: {circle.tinh_chu_vi():.2f}")
