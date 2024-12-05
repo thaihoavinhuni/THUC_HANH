@@ -1,0 +1,8 @@
+class HinhChunhat:
+    def __init__(self, chieu_dai, chieu_rong):
+        self.chieu_dai = chieu_dai
+        self.chieu_rong = chieu_rong
+    def tinh_dien_tich(self):
+        return self.chieu_dai * self.chieu_rong
+hinh = HinhChunhat(70, 50)
+print(f"Diện tích hình chữ nhật là: {hinh.tinh_dien_tich()}")
