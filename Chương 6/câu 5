@@ -1,0 +1,14 @@
+class ReverseWords:
+    def reverse_string(self, input_string):
+
+        words = input_string.split()
+        
+        reversed_words = words[::-1]
+        
+        reversed_string = ' '.join(reversed_words)
+        
+        return reversed_string
+reverser = ReverseWords()
+input_string = 'hello .py'
+result = reverser.reverse_string(input_string)
+print(f"Chuỗi đảo ngược: '{result}'")
