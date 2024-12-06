@@ -1,0 +1,16 @@
+def analyze_file(file_path):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            content = file.read()
+            num_characters = len(content)
+            num_words = len(content.split())
+            num_lines = len(content.splitlines())
+        
+        print(f"Tổng số ký tự: {num_characters}")
+        print(f"Tổng số từ: {num_words}")
+        print(f"Tổng số dòng: {num_lines}")
+    
+    except FileNotFoundError:
+        print("Tệp không tồn tại. Vui lòng kiểm tra đường dẫn.")
+    except Exception as e:
+        print(f"Đã xảy ra lỗi: {e}")
