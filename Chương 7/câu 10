@@ -1,0 +1,20 @@
+def find_longest_words():
+    file_path = input("Nhập tên tệp (bao gồm đường dẫn nếu cần): ")
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            content = file.read()
+        
+        words = [word.strip(",.!?;:()[]\"") for word in content.split()]
+        
+        max_length = max(len(word) for word in words) if words else 0
+        longest_words = [word for word in words if len(word) == max_length]
+        
+        print(f"Từ dài nhất có độ dài {max_length}:")
+        print(", ".join(longest_words))
+    
+    except FileNotFoundError:
+        print("Tệp không tồn tại. Vui lòng kiểm tra đường dẫn và tên tệp.")
+    except Exception as e:
+        print(f"Đã xảy ra lỗi: {e}")
+
+find_longest_words()
