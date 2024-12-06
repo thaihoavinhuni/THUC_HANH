@@ -1,0 +1,14 @@
+def count_lines_in_file():
+    file_path = input("Nhập tên tệp (bao gồm đường dẫn nếu cần): ")
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            line_count = sum(1 for _ in file)  
+        
+        print(f"Số dòng trong tệp: {line_count}")
+    
+    except FileNotFoundError:
+        print("Tệp không tồn tại. Vui lòng kiểm tra đường dẫn và tên tệp.")
+    except Exception as e:
+        print(f"Đã xảy ra lỗi: {e}")
+
+count_lines_in_file()
