@@ -1,0 +1,17 @@
+def copy_file_content():
+    source_file = input("Nhập tên tệp nguồn (bao gồm đường dẫn nếu cần): ")
+    destination_file = input("Nhập tên tệp đích (bao gồm đường dẫn nếu cần): ")
+    try:
+        with open(source_file, 'r', encoding='utf-8') as src:
+            content = src.read()
+        with open(destination_file, 'w', encoding='utf-8') as dest:
+            dest.write(content)
+        
+        print(f"Nội dung đã được sao chép từ '{source_file}' sang '{destination_file}'.")
+    
+    except FileNotFoundError:
+        print("Tệp nguồn không tồn tại. Vui lòng kiểm tra đường dẫn và tên tệp.")
+    except Exception as e:
+        print(f"Đã xảy ra lỗi: {e}")
+
+copy_file_content()
