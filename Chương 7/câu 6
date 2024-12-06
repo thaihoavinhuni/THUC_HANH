@@ -1,0 +1,25 @@
+def read_last_n_lines():
+    file_path = input("Nhập tên tệp (bao gồm đường dẫn nếu cần): ")
+    try:
+        n = int(input("Nhập số dòng bạn muốn đọc: "))
+        if n <= 0:
+            print("Số dòng phải lớn hơn 0.")
+            return
+        
+        with open(file_path, 'r', encoding='utf-8') as file:
+            lines = file.readlines() 
+            
+        last_n_lines = lines[-n:]
+        
+        print(f"\n{n} dòng cuối cùng của tệp:")
+        for line in last_n_lines:
+            print(line, end='')  
+        
+    except FileNotFoundError:
+        print("Tệp không tồn tại. Vui lòng kiểm tra đường dẫn và tên tệp.")
+    except ValueError:
+        print("Vui lòng nhập một số hợp lệ cho số dòng.")
+    except Exception as e:
+        print(f"Đã xảy ra lỗi: {e}")
+
+read_last_n_lines()
