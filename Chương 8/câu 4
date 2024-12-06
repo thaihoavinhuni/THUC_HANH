@@ -1,0 +1,18 @@
+import tkinter as tk
+
+def on_button_click():
+    button.config(bg="green", fg="white")  
+    label.config(text="Nút đã được nhấn!") 
+
+window = tk.Tk()
+window.title("Cửa sổ đồ họa Tkinter")  
+window.geometry("300x200")  
+button = tk.Button(window, text="Nhấn vào tôi", command=on_button_click, bg="blue", fg="white")
+button.pack(pady=20)  
+label = tk.Label(window, text="Chưa nhấn nút", fg="black")
+label.pack(pady=10) 
+def on_key_press(event):
+    if event.keysym == 'Escape':  
+        window.quit() 
+window.bind("<KeyPress>", on_key_press)
+window.mainloop()
