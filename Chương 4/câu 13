@@ -1,2 +1,6 @@
-ds = input('nhập chuỗi: ').split()
-print("vị trí của Nghệ An : ", ds.index('Nghệ An'))
+ds = input('Nhập chuỗi (các phần tử cách nhau bằng khoảng trắng): ').split()
+
+try:
+    print("Vị trí của Nghệ An: ", ds.index('Nghệ An'))
+except ValueError:
+    print("Nghệ An không có trong danh sách.")
