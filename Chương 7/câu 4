@@ -11,7 +11,7 @@ def read_first_n_lines():
             for i, line in enumerate(file):
                 if i >= n:
                     break
-                print(line, end='')  # Dùng `end=''` để tránh in thêm dòng trống
+                print(line, end='') 
         
     except FileNotFoundError:
         print("Tệp không tồn tại. Vui lòng kiểm tra đường dẫn và tên tệp.")
